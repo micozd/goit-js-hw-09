@@ -7,13 +7,13 @@ function getRandomHexColor() {
 function changeBackgroundColor() {
 
     document.body.style.backgroundColor = getRandomHexColor();
-    var timeout = setTimeout(changeBackgroundColor, 1000);
+    timeout = setTimeout(changeBackgroundColor, 1000);
     
 }
 
 function pause() {
     clearTimeout(timeout)
-    var timeout = null
+    timeout = null
 }
     
 
@@ -28,4 +28,5 @@ document.querySelector('button[data-stop]').addEventListener('click', function()
     this.disabled = true;
     document.querySelector('button[data-start]').disabled = false;
     pause();
+    timeout = null
 });
