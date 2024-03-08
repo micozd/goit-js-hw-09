@@ -28,5 +28,5 @@ document.querySelector('button[data-stop]').addEventListener('click', function()
     this.disabled = true;
     document.querySelector('button[data-start]').disabled = false;
     pause();
-    timeout = null
+    return timeout = null
 });
